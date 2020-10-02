@@ -78,6 +78,9 @@ public class ComboBoxExperiments extends Application {
             Gson gson = new Gson();
             this.book = gson.fromJson(inputLine, Book.class);
 
+           /* String[] zatiak = inputLine.split("ISBN:"+isbn+"\":");
+            inputLine = zatiak[1].substring(0, zatiak[1].length()-1);*/
+
             in.close();
 
 
