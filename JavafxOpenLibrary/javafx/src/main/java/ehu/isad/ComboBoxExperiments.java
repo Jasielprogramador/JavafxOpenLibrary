@@ -46,7 +46,7 @@ public class ComboBoxExperiments extends Application {
         isbnMap.put("Data Algorithms","9781491906187");
 
 
-        isbnMap.get("1491910399");
+        //isbnMap.get("1491910399");
         //No te permite escribir
         comboBox.setEditable(false);
         comboBox.getSelectionModel().selectFirst();
@@ -68,7 +68,7 @@ public class ComboBoxExperiments extends Application {
             } catch (IOException ioException) {
                 ioException.printStackTrace();
             }
-            text.setText("Izenburua: "+this.book.getDetails().getTitle()+","+"Orrialde kopurua: "+this.book.getDetails().getNumber_of_pages()+","+"Argitaratzailea: "+this.book.getDetails().getPublishers());
+            text.setText("Izenburua: "+this.book.getDetails().getTitle()+","+"Orrialde kopurua: "+this.book.getDetails().getNumber_of_pages()+","+"Argitaratzailea: "+this.book.getDetails().getPublishers()[0]);
 
         });
 
