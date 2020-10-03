@@ -56,11 +56,11 @@ public class ComboBoxExperiments extends Application {
 
 
         this.readFromUrl(isbnMap.get(comboBox.getValue()));
-        text.setText("Izenburua: " + this.book.getDetails().getTitle() + "," + "Orrialde kopurua: " + this.book.getDetails().getNumber_of_pages() + "," + "Argitaratzailea: " + this.book.getDetails().getPublishers());
+        text.setText("Izenburua: " + this.book.getDetails().getTitle() + "," + "Orrialde kopurua: " + this.book.getDetails().getNumber_of_pages() + "," + "Argitaratzailea: " + this.book.getDetails().getPublishers()[0]);
 
 
 
-        /*comboBox.setOnAction(e -> {
+        comboBox.setOnAction(e -> {
 
             System.out.println(comboBox.getValue());
             try {
@@ -70,7 +70,7 @@ public class ComboBoxExperiments extends Application {
             }
             text.setText("Izenburua: "+this.book.getDetails().getTitle()+","+"Orrialde kopurua: "+this.book.getDetails().getNumber_of_pages()+","+"Argitaratzailea: "+this.book.getDetails().getPublishers());
 
-        });*/
+        });
 
         VBox vbox = new VBox(comboBox,text);
         vbox.setPadding(new Insets(50,0,50,0));
@@ -96,7 +96,6 @@ public class ComboBoxExperiments extends Application {
 
             Gson gson = new Gson();
             this.book = gson.fromJson(inputLine, Book.class);
-            System.out.println(this.book.getDetails().getTitle());
 
             in.close();
 
