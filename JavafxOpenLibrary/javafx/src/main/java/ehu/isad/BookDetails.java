@@ -13,11 +13,13 @@ public class BookDetails {
     private String local_id;
     private String isbn_13;
     private Integer isbn_10;
+    private Integer lastest_revision;
     private String last_modified;
-    private Authors authors;
+    private String authors;
+    private String publish_date;
     private String works;
     private String type;
-
+    private Integer revision;
 
     public String getPublishers() {
         return publishers;
@@ -99,6 +101,14 @@ public class BookDetails {
         this.isbn_10 = isbn_10;
     }
 
+    public Integer getLastest_revision() {
+        return lastest_revision;
+    }
+
+    public void setLastest_revision(Integer lastest_revision) {
+        this.lastest_revision = lastest_revision;
+    }
+
     public String getLast_modified() {
         return last_modified;
     }
@@ -107,12 +117,20 @@ public class BookDetails {
         this.last_modified = last_modified;
     }
 
-    public Authors getAuthors() {
+    public String getAuthors() {
         return authors;
     }
 
-    public void setAuthors(Authors authors) {
+    public void setAuthors(String authors) {
         this.authors = authors;
+    }
+
+    public String getPublish_date() {
+        return publish_date;
+    }
+
+    public void setPublish_date(String publish_date) {
+        this.publish_date = publish_date;
     }
 
     public String getWorks() {
@@ -131,6 +149,13 @@ public class BookDetails {
         this.type = type;
     }
 
+    public Integer getRevision() {
+        return revision;
+    }
+
+    public void setRevision(Integer revision) {
+        this.revision = revision;
+    }
 
     @Override
     public String toString() {
@@ -145,11 +170,13 @@ public class BookDetails {
                 ", local_id='" + local_id + '\'' +
                 ", isbn_13='" + isbn_13 + '\'' +
                 ", isbn_10=" + isbn_10 +
+                ", lastest_revision=" + lastest_revision +
                 ", last_modified='" + last_modified + '\'' +
-                ", authors=" + authors +
+                ", authors='" + authors + '\'' +
+                ", publish_date='" + publish_date + '\'' +
                 ", works='" + works + '\'' +
                 ", type='" + type + '\'' +
+                ", revision=" + revision +
                 '}';
     }
 }
-
